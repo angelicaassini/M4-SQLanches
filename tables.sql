@@ -20,6 +20,11 @@ CREATE TABLE IF NOT EXISTS enderecos(
 	FOREIGN KEY (cliente_id) REFERENCES clientes(id) ON DELETE CASCADE
 );
 
+ALTER TABLE
+	enderecos 
+ADD COLUMN
+	cep varchar(9) NOT NULL;
+
 -- Tabela pedidos
 CREATE TABLE IF NOT EXISTS pedidos(
 	id BIGSERIAL PRIMARY KEY,
