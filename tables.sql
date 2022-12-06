@@ -41,6 +41,11 @@ CREATE TABLE IF NOT EXISTS produtos(
 	pts_de_lealdade integer NOT null	
 );
 
+ALTER TABLE
+	produtos 
+ADD COLUMN 
+	tipo varchar(30) NOT NULL;
+
 -- Tabela produtos_pedidos
 CREATE TABLE IF NOT EXISTS produtos_pedidos(
 	id BIGSERIAL PRIMARY KEY,
